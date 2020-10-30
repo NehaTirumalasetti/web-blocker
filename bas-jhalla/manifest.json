@@ -1,0 +1,17 @@
+  {
+    "name": "bas jhalla",
+    "version": "0.1.0",
+    "description": "Website blocker",
+    "manifest_version": 2,
+    "content_scripts":[
+      {
+        "matches":["https://www.reddit.com/*"],
+        "js":["script.js"],
+        "css":["style.css"]
+      }
+    ],
+   "permissions" :["tabs"],
+   "chrome_url_overrides" : {
+    "newtab": "block.html"
+  }
+  }
